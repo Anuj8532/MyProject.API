@@ -9,9 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 //builder.Services.AddDbContext<EmployeeDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeDBContext") ?? throw new InvalidOperationException("Connection string 'EmployeeDbContext' not found.")));
 
-var SQL_IP = Environment.GetEnvironmentVariable("SQL_IP");
-var SQL_DB = Environment.GetEnvironmentVariable("SQL_DB");
-var SQL_Conn_STRING = $"Server={SQL_IP};Database={SQL_DB};Trusted_Connection = True; Encrypt=False; MultipleActiveResultSets=True";
+//var SQL_IP = Environment.GetEnvironmentVariable("SQL_IP");
+//var SQL_DB = Environment.GetEnvironmentVariable("SQL_DB");
+var SQL_Conn_STRING = $"Server={"DESKTOP-UCN8F59\\MSSQLSERVER01"};Database={"Employee_Details"};Trusted_Connection = True; Encrypt=False; MultipleActiveResultSets=True";
 
 builder.Services.AddDbContext<EmployeeDbContext>(options =>
 {
